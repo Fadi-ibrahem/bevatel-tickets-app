@@ -113,13 +113,13 @@ This application adheres to the api specifications set by the [Mailtrap](https:/
 - `database/migrations` - Contains all the database migrations
 - `database/seeds` - Contains the database seeder
 
-## Environment variables
+# Environment variables
 
 - `.env` - Environment variables can be set in this file
 
 ***Note*** : You can quickly set the database information and other variables in this file and have the application fully working.
 
-# New Constants
+## New Constants
 
 - `MAILTRAP_API_TOKEN` - api token given by mailtrap website to be able to test emails
 - `MAILTRAP_INBOX_ID` - mailtrap specific email inbox ID to select its messages to be fetched
