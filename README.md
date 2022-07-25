@@ -72,8 +72,8 @@ Run the database seeder and you're done
 To install with [Docker](https://www.docker.com), run following commands:
 
 ```
-git clone https://github.com/Fadi-ibrahem/bevatel-tickets-app.git
-cd bevatel-tickets-app
+git clone https://github.com/Fadi-ibrahem/bevatel-tickets-using-mailtrap.git
+cd bevatel-tickets-using-mailtrap
 cp .env.example.docker .env
 docker run -v $(pwd):/app composer install
 cd ./docker
