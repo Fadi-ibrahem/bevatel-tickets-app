@@ -19,3 +19,5 @@ Route::resource('/replies', ReplyController::class);
 
 // A specific Ticket Replies Route
 Route::get('/ticket/{ticket}/replies', [TicketController::class, 'replies'])->name('ticket.replies');
+
+Route::get();
