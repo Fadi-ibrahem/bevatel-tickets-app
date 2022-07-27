@@ -14,11 +14,11 @@ Please check the official laravel installation guide for server requirements bef
 
 Clone the repository
 
-    git clone https://github.com/Fadi-ibrahem/bevatel-tickets-app.git
+    git clone https://github.com/Fadi-ibrahem/bevatel-tickets-using-mailtrap.git
 
 Switch to the repo folder
 
-    cd bevatel-tickets-app
+    cd bevatel-tickets-using-mailtrap
 
 Install all the dependencies using composer
 
@@ -44,8 +44,8 @@ You can now access the server at http://localhost:8000
 
 **TL;DR command list**
 
-    git clone https://github.com/Fadi-ibrahem/Bevatel-Task.git
-    cd bevatel-tickets-app
+    git clone https://github.com/Fadi-ibrahem/bevatel-tickets-using-mailtrap.git
+    cd bevatel-tickets-using-mailtrap
     composer install
     cp .env.example .env
     php artisan key:generate
@@ -72,8 +72,8 @@ Run the database seeder and you're done
 To install with [Docker](https://www.docker.com), run following commands:
 
 ```
-git clone https://github.com/Fadi-ibrahem/bevatel-tickets-app.git
-cd bevatel-tickets-app
+git clone https://github.com/Fadi-ibrahem/bevatel-tickets-using-mailtrap.git
+cd bevatel-tickets-using-mailtrap
 cp .env.example.docker .env
 docker run -v $(pwd):/app composer install
 cd ./docker
@@ -113,13 +113,13 @@ This application adheres to the api specifications set by the [Mailtrap](https:/
 - `database/migrations` - Contains all the database migrations
 - `database/seeds` - Contains the database seeder
 
-## Environment variables
+# Environment variables
 
 - `.env` - Environment variables can be set in this file
 
 ***Note*** : You can quickly set the database information and other variables in this file and have the application fully working.
 
-# New Constants
+## New Constants
 
 - `MAILTRAP_API_TOKEN` - api token given by mailtrap website to be able to test emails
 - `MAILTRAP_INBOX_ID` - mailtrap specific email inbox ID to select its messages to be fetched
