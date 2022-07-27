@@ -121,8 +121,7 @@ This application adheres to the api specifications set by the [Mailtrap](https:/
 
 ## New Constants
 
-- `MAILTRAP_API_TOKEN` - api token given by mailtrap website to be able to test emails
-- `MAILTRAP_INBOX_ID` - mailtrap specific email inbox ID to select its messages to be fetched
+- `MAILTRAP_API_TOKEN` - api token given by mailtrap website to be able to authenticate with them and test emails
 
 ----------
  
