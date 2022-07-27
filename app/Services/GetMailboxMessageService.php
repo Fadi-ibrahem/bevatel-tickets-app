@@ -8,8 +8,14 @@ class GetMailboxMessageService
 {
     public function getMessage()
     {
+        // Get A Specific Inbox ID Request
+        $response = Http::get('https://mailtrap.io/api/v1/companies?api_token=' . env('MAILTRAP_API_TOKEN'));
+
+        // Select The Inbox ID From Response Data
+        $inboxID = $response->json()[0]['inboxes'][0]['id'];
+
         // Mailtrap Api Response
-        $response = Http::get('https://mailtrap.io/api/v1/inboxes/' . env('MAILTRAP_INBOX_ID') . '/messages?api_token=' . env('MAILTRAP_API_TOKEN'));
+        $response = Http::get('https://mailtrap.io/api/v1/inboxes/' . $inboxID . '/messages?api_token=' . env('MAILTRAP_API_TOKEN'));
 
         // Convert Response To A Readable Array
         $responseData = $response->json();

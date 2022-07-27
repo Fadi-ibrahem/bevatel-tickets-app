@@ -1,9 +1,10 @@
 <?php
 
-use App\Interfaces\TicketRepositoryInterface;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\Front\TicketController;
+use App\Interfaces\TicketRepositoryInterface;
 use \App\Http\Controllers\Front\ReplyController;
+use \App\Http\Controllers\Front\TicketController;
 
 // Make the route redirect to the tickets index
 Route::get('/', function () {
