@@ -14,14 +14,22 @@ class GetMailboxMessageService
         // Select The Inbox ID From Response Data
         $inboxID = $response->json()[0]['inboxes'][0]['id'];
 
-        // Mailtrap Api Response
+        // Get All Messages For A Specific Inbox
         $response = Http::get('https://mailtrap.io/api/v1/inboxes/' . $inboxID . '/messages?api_token=' . env('MAILTRAP_API_TOKEN'));
 
         // Convert Response To A Readable Array
-        $responseData = $response->json();
+        $response = $response->json();
+
+        // An Array To Hold All Unread Messages
+        $unreadMessages = [];
+
+        // Loop Through All Messages, Then Select Unread Messages Only
+        foreach($response as $message) {
+            if($message['is_read']) $unreadMessages[] = $message;
+        }
 
         // Select Random Message From The Email Box
-        $message = $responseData[mt_rand(0, count($responseData)-1)];
+        $message = $unreadMessages[mt_rand(0, count($unreadMessages)-1)];
 
         // Required Data To Submit A Ticket
         $messageSubject     = $message['subject'];
