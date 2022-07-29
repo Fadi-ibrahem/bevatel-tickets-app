@@ -1,8 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
-use App\Interfaces\TicketRepositoryInterface;
 use \App\Http\Controllers\Front\ReplyController;
 use \App\Http\Controllers\Front\TicketController;
 
